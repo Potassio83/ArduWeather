@@ -28,7 +28,7 @@ void setup() {
 }
   
 void loop() {
-  data = SD.open("MetData.txt", FILE_WRITE);
+  data = SD.open("DATI.txt", FILE_WRITE);
   DateTime now = rtc.now(); 
   data.print(" | ");
   data.print(bme.readTemperature());
