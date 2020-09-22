@@ -30,27 +30,27 @@ void setup() {
 void loop() {
   data = SD.open("DATI.txt", FILE_WRITE);
   DateTime now = rtc.now(); 
-  data.print(" | ");
+  data.print("");
   data.print(bme.readTemperature());
-  data.print(" | ");
+  data.print(",");
   data.print(bme.readPressure() / 100.0F);
-  data.print(" | ");
+  data.print(",");
   data.print(bme.readHumidity());
-  data.print(" |    ");
+  data.print(",");
   data.print(now.day());
   data.print("/");
   data.print(now.month());
   data.print("/");
   data.print(now.year());
-  data.print("    ");
+  data.print(" ");
   data.print(now.hour());
   data.print(":");
   data.print(now.minute());
   data.print(":");
   data.print(now.second());
-  data.print("   Count No.");
+  data.print(",Count No.");
   data.print(meteoCount);
-  data.println("");
+  data.println(",");
   
   data.close();  
   Serial.println("Scrittura su SD effettuata correttamente");
