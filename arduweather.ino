@@ -13,7 +13,7 @@ const int chipSelect = 10;
 int timestring;
 void setup() {
     Serial.begin(9600);
-   Serial.println("Stazione meteo By Marco Strozzi http://potassio83.it");
+   Serial.println("Stazione meteo By PotassioK");
    Wire.begin();
   delay(3000);
   bme.begin(0x76);
